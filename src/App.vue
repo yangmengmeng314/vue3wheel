@@ -1,5 +1,4 @@
 <template>
-    <div></div>
     <router-view />
 </template>
 
@@ -13,3 +12,6 @@ export default {
     }
 }
 </script>
+<style>
+    @import 'assets/public.css'; /*引入公共样式*/
+</style>
