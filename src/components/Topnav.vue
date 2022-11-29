@@ -1,19 +1,23 @@
 <template>
     <div class="topnav flex_center">
         <div class="logo">LOGO</div>
-        <ul>
+        <ul class="menu">
             <li>菜单1</li>
             <li>菜单2</li>
         </ul>
-        <span class="toogleAside" @click="toggleMenu"></span>
+        <span class="toggleAside" @click="toggleMenu"></span>
     </div>
 </template>
 
 <script lang='ts'>
-// import { inject, Ref } from 'vue'
+import { inject, Ref } from 'vue'
 export default {
     setup(){
-        
+        const asideVisible = inject<Ref<boolean>>('asideVisible')
+        const toggleMenu = () => {
+            asideVisible.value = !asideVisible.value
+        }
+        return {toggleMenu}
     }
 }
 </script>
