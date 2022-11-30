@@ -1,10 +1,18 @@
 <template>
-    <div>Switch文档</div>
+    <div>
+        <Switch v-model:value='bool' />                                                                                                                                                   
+    </div>
 </template>
 
-<script>
+<script lang='ts'>
+import Switch from '../lib/Switch.vue'
+import { ref } from 'vue'
 export default {
-
+    components:{Switch},
+    setup() {
+        const bool = ref(true)
+        return {bool}
+    },
 }
 </script>
 
