@@ -1,9 +1,13 @@
 <template>
     <div class="topnav flex_center">
-        <div class="logo">LOGO</div>
+        <div class="logo flex_center">
+            <img src="https://img.alicdn.com/imgextra/i3/O1CN01faWrqb1N9PYxuP5iP_!!6000000001527-2-tps-170-170.png" alt="">
+            <h2>wheel-UI</h2>
+        </div>
         <ul class="menu">
-            <li>菜单1</li>
-            <li>菜单2</li>
+            <li>Design</li>
+            <li>Document</li>
+            <li>Develop</li>
         </ul>
         <span class="toggleAside" @click="toggleMenu"></span>
     </div>
@@ -23,49 +27,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.topnav {
-  background: pink;
-  display: flex;
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  justify-content: center;
-  align-items: center;
-  > .logo {
-    max-width: 6em;
-    margin-right: auto;
-  }
-  > .menu {
-    display: flex;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    > li {
-      margin: 0 1em;
+.topnav {background: hsl(204, 98%, 64%);display: flex;padding: 16px;position: fixed;top: 0;left: 0;width: 100%;z-index: 10;justify-content: center;align-items: center;
+    > .logo {max-width: 10em;margin-right: auto;color:#fff;
+        img{width: 2rem;margin-right: 10px;} 
     }
-  }
-  > .toggleAside {
-    width: 24px;
-    height: 24px;
-    background: red;
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-  }
-  @media (max-width: 500px) {
-    > .menu {
-      display: none;
-    }
-    > .logo {
-      margin: 0 auto;
+    > .menu {display: flex;white-space: nowrap;flex-wrap: nowrap;
+        > li {margin: 0 1em;color:#fff;}
     }
     > .toggleAside {
-      display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: red;
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
     }
-  }
+    @media (max-width: 500px) {
+        > .menu {
+        display: none;
+        }
+        > .logo {
+        margin: 0 auto;
+        }
+        > .toggleAside {
+        display: inline-block;
+        }
+    }
 }
 </style>
